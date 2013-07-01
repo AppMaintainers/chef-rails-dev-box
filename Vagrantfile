@@ -27,11 +27,17 @@ Vagrant::Config.run do |config|
           }
         },
         "rbenv" => {
-          "global"  => "2.0.0-p0",
-          "rubies" => [ "2.0.0-p0" ],
+          "global"  => "2.0.0-rc2",
+          "rubies" => [ "2.0.0-rc2", "1.8.7-p374", "1.9.3-p448" ],
           "gems" => {
-            "2.0.0-p0" => [
-              { 'name' => 'bundler' }
+            "1.8.7-p374" => [
+                { 'name' => 'bundler' }
+            ],
+            "1.9.3-p448" => [
+                { 'name' => 'bundler' }
+            ],
+            "2.0.0-rc2" => [
+                { 'name' => 'bundler' }
             ]
           }
         }
