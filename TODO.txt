@@ -1,0 +1,4 @@
+- phantomjs
+- imagemagick
+- elasticsearch
+- mc
