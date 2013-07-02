@@ -2,3 +2,5 @@
 rails
 tmp
 chef/cookbooks
+.idea
+package.box

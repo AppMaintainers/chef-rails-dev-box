@@ -13,10 +13,11 @@ run_list(
   "recipe[memcached]",
   "recipe[mongodb::default]",
   "recipe[nodejs::install_from_binary]",
-  "recipe[phantomjs::default]",
-  "recipe[ruby_build]",
-  "recipe[rbenv::system]",
-  "recipe[rbenv::vagrant]",
+  #"recipe[rvm::user_install]",
+  #"recipe[phantomjs::default]",
+  #"recipe[ruby_build]",
+  #"recipe[rbenv::system]",
+  #"recipe[rbenv::vagrant]",
   "recipe[database]",
   "recipe[postinstall]"
 )

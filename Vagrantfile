@@ -26,6 +26,11 @@ Vagrant::Config.run do |config|
             "postgres" => ""
           }
         },
+        'rvm' => {
+          'user' => 'vagrant',
+          'default_ruby'  => 'rbx',
+          'rubies'        => ['2.0.0']
+        },
         "rbenv" => {
           "global"  => "2.0.0-rc2",
           "rubies" => [ "2.0.0-rc2", "1.8.7-p374", "1.9.3-p448" ],
