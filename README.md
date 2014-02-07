@@ -1,5 +1,15 @@
 # chef-rails-dev-box
 
+updated devbox
+it has the following:
+- mysql: root, ""
+- postgresql: postgres, ""
+- mongodb:
+- memcache:
+- mc
+- rvm
+
+
 ## Introduction
 
 This project automates the setup of a development environment for Ruby on Rails core development.

@@ -26,25 +26,19 @@ Vagrant::Config.run do |config|
             "postgres" => ""
           }
         },
+        # TODO: this config is not right yet
         'rvm' => {
+          'user_installs' => [
+              {
+                  'user' => 'vagrant',
+                  'default_ruby'  => '2.0.0',
+                  'rubies'        => ['2.0.0']
+              }
+
+          ],
           'user' => 'vagrant',
-          'default_ruby'  => 'rbx',
+          'default_ruby'  => '2.0.0',
           'rubies'        => ['2.0.0']
-        },
-        "rbenv" => {
-          "global"  => "2.0.0-rc2",
-          "rubies" => [ "2.0.0-rc2", "1.8.7-p374", "1.9.3-p448" ],
-          "gems" => {
-            "1.8.7-p374" => [
-                { 'name' => 'bundler' }
-            ],
-            "1.9.3-p448" => [
-                { 'name' => 'bundler' }
-            ],
-            "2.0.0-rc2" => [
-                { 'name' => 'bundler' }
-            ]
-          }
         }
       }
   end
