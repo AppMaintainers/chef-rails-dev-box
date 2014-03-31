@@ -1,13 +1,47 @@
 # chef-rails-dev-box
 
-updated devbox
-it has the following:
-- mysql: root, ""
-- postgresql: postgres, ""
-- mongodb:
-- memcache:
-- mc
-- rvm
+##  NEW APP MAINTAINERS CHEF DEV BOX
+
+mysql and posgresql root password = “”
+
+## IN THE BOX
+
+$rvm list known
+
+   ree-1.8.7-2012.02 [ x86_64 ]
+   ruby-1.8.7-p374 [ x86_64 ]
+   ruby-1.9.3-p545 [ x86_64 ]
+=* ruby-2.0.0-p451 [ x86_64 ]
+   ruby-2.1.1 [ x86_64 ]
+
+$ps ax
+  746 ?        Ss     0:00 cron
+ 1038 ?        Ss     0:00 /usr/sbin/sshd -D
+ 6897 ?        Sl     0:00 /usr/bin/memcached -v -m 64 -p 11211 -U 11211 -u nobody -l 0.0.0.0 -c 1024 -I 1
+ 6927 ?        Sl     0:14 /usr/bin/mongod --port 27017 --dbpath /var/lib/mongodb --logpath /var/log/mongodb/mongodb.log
+20405 ?        Ssl    0:00 /usr/sbin/mysqld
+28445 ?        S      0:00 /usr/lib/postgresql/9.1/bin/postgres -D /var/lib/postgresql/9.1/main -c config_file=/etc/postgresql/9.1/main/postgresql.conf
+
+## RECIPES INSTALLED
+
+  "recipe[git]",
+  "recipe[chef-mc]",
+  "recipe[sqlite]",
+  "recipe[mysql::client]",
+  "recipe[mysql::ruby]",
+  "recipe[mysql::server]",
+  "recipe[postgresql::ruby]",
+  "recipe[postgresql::client]",
+  "recipe[postgresql::server]",
+  "recipe[memcached]",
+  "recipe[mongodb::10gen_repo]",
+  "recipe[mongodb::default]",
+  "recipe[nodejs::install_from_binary]",
+  "recipe[phantomjs::default]",
+  "recipe[database]",
+  "recipe[rvm::vagrant]",
+  "recipe[rvm::user]",
+  "recipe[postinstall]"
 
 
 ## Introduction
