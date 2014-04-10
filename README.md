@@ -4,6 +4,14 @@
 
 mysql and posgresql root password = “”
 
+
+## TODO
+- db access setup in sample Vagrantfile and test it (port forward, access controll setup in the box)
+- mailcatcher gem setup in the box with port setup in the sample Vagrantfile
+- vim setup in the box
+- git prompt setup
+- add redis recipe
+
 ## IN THE BOX
 
 $rvm list known

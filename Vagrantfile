@@ -8,8 +8,8 @@ Vagrant::Config.run do |config|
   config.vm.box_url = "https://opscode-vm.s3.amazonaws.com/vagrant/opscode_ubuntu-12.04_chef-11.2.0.box"
   config.vm.host_name = 'chef-rails-dev-box'
 
-  #config.vm.network :hostonly, "192.168.30.00"
-  #config.vm.share_folder("vagrant-root", "/vagrant", ".")#, "nfs" => true)
+  config.vm.network :hostonly, "192.168.30.00"
+  config.vm.share_folder("vagrant-root", "/vagrant", ".", "nfs" => true)
 
   config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path = ["chef/cookbooks", "chef/site-cookbooks"]
