@@ -11,6 +11,7 @@ mysql and posgresql root password = “”
 - vim setup in the box
 - git prompt setup
 - add redis recipe
+- add ssh agent forward into sample Vagrantfile
 
 ## IN THE BOX
 
