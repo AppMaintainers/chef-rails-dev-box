@@ -22,3 +22,20 @@
 #    chmod -R g+rwxX rbenv
 #  EOH
 #end
+
+template "/home/vagrant/bash_custom_commands.txt" do
+  source  "bash_custom_commands"
+  owner   'vagrant'
+  group   'vagrant'
+  mode    0644
+  action  :create
+end
+
+bash "copy bash custom commands to profile" do
+  user "vagrant"
+  cwd "/home/vagrant"
+  code <<-EOS
+    cat /home/vagrant/bash_custom_commands.txt >> /home/vagrant/.profile
+  EOS
+end
+

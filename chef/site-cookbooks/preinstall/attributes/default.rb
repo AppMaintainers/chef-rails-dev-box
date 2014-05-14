@@ -17,4 +17,5 @@ node.default[:packages] = %w(
   ncurses-dev
   automake
   libtool
+  libmagickwand-dev
 )
