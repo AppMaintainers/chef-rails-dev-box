@@ -11,6 +11,14 @@ This tool is made by the [App Maintainers team](http://AppMaintainers.com) and u
 - posgresql: postgres = ""
 - posgresql: vagrant = ""
 
+## Sample Vagrant file
+```ruby
+Vagrant.configure("2") do |config|
+  config.vm.box       = 'devbox-2-0-5'
+  config.vm.box_url   = '~/Sites/chef-rails-dev-box/builds/devbox-2-0-5.box'
+end
+```
+
 ## Running services
 - PostgreSQL
 - MySQL
