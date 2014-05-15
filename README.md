@@ -1,7 +1,7 @@
 # [APP MAINTAINERS](http://AppMaintainers.com) DEVBOX
 
 ## Introduction
-This project automates the setup of a development environment for Ruby on Rails core development. It also includes numerous other web development tools to help node.js and meteor projects.
+This project automates the setup of a development environment for Ruby on Rails development. It also includes numerous other web development tools to help node.js and meteor projects.
 
 This tool is made by the [App Maintainers team](http://AppMaintainers.com) and uses Chef and Vagrant to automate the process.
 
