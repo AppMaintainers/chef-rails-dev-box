@@ -49,6 +49,11 @@ template "#{node[:postgresql][:dir]}/pg_hba.conf" do
   notifies :restart, "service[postgresql]", :immediately
 end
 
+template "#{node[:postgresql][:dir]}/../postgresql.conf" do
+  source "postgresql.conf"
+  notifies :restart, "service[postgresql]", :immediately
+end
+
 postgresql_connection_info = {
   :host     => "localhost",
   :password => node['postgresql']['password']['postgres']
