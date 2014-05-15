@@ -1,7 +1,7 @@
 # [APP MAINTAINERS](http://AppMaintainers.com) DEVBOX
 
 ## Introduction
-This project automates the setup of a development environment for Ruby on Rails core development. It also includes numerous other web development tools to help node.js and meteor projects.
+This project automates the setup of a development environment for Ruby on Rails development. It also includes numerous other web development tools to help node.js and meteor projects.
 
 This tool is made by the [App Maintainers team](http://AppMaintainers.com) and uses Chef and Vagrant to automate the process.
 
@@ -10,6 +10,14 @@ This tool is made by the [App Maintainers team](http://AppMaintainers.com) and u
 - mysql: root = ""
 - posgresql: postgres = ""
 - posgresql: vagrant = ""
+
+## Sample Vagrant file
+```ruby
+Vagrant.configure("2") do |config|
+  config.vm.box       = 'devbox-2-0-5'
+  config.vm.box_url   = '~/Sites/chef-rails-dev-box/builds/devbox-2-0-5.box'
+end
+```
 
 ## Running services
 - PostgreSQL
@@ -37,7 +45,8 @@ This tool is made by the [App Maintainers team](http://AppMaintainers.com) and u
 - curl
 
 ## TODO
-- db access setup in sample Vagrantfile and test it (port forward, access controll setup in the box)
+- mysql server auto start
+- elasticsearch proper config(it seems not working out of the box)
 - vim setup in the box
 
 ## Requirements
@@ -60,4 +69,6 @@ host $ vagrant up
 host $ vagrant package --output builds/devbox-2-0-x.box --vagrantfile builds/Vagrantfile
 ```
 
-Please check the [Vagrant documentation](http://vagrantup.com/v1/docs/index.html) for more information on Vagrant.
+## Userful
+- Please check the [Vagrant documentation](http://vagrantup.com/v1/docs/index.html) for more information on Vagrant.
+- [Testing memcache with telnet](https://wincent.com/wiki/testing_memcached_with_telnet)
