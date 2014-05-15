@@ -1,7 +1,7 @@
 Vagrant.configure("2") do |config|
-  #config.vm.box       = 'devbox-2-0-4'
-  #config.vm.box_url   = 'devbox-2-0-4.box'
-  #config.vm.hostname = 'am-devbox-2-0-3'
+  #config.vm.box_url   = 'devbox-2-0-5.box'
+  config.vm.box       = 'devbox-2-0-5'
+  config.vm.hostname = 'am-devbox-2-0-5'
 
   # Rails & HTTP development
   config.vm.network :forwarded_port, guest: 3000, host: 3000

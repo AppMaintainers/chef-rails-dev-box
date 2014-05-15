@@ -84,3 +84,12 @@ databases.each do |database|
     action :grant
   end
 end
+
+bash "granting dbcreate to vagrant" do
+  user "vagrant"
+  cwd "/home/vagrant"
+  code <<-EOS
+    psql -h localhost -U postgres -c "ALTER USER vagrant CREATEDB;"
+  EOS
+end
+

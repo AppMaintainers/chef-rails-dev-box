@@ -35,7 +35,7 @@ Vagrant::Config.run do |config|
               {
                   :user => 'vagrant',
                   :default_ruby  => '2.0',
-                  :rubies        => ['2.0'] # 'ree', '1.8.7', '1.9', '2.1'
+                  :rubies        => ['2.0', 'ree', '1.8.7', '1.9', '2.1']
               }
           ]
         },
