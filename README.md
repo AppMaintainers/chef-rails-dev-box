@@ -38,6 +38,7 @@ This tool is made by the [App Maintainers team](http://AppMaintainers.com) and u
 
 ## TODO
 - db access setup in sample Vagrantfile and test it (port forward, access controll setup in the box)
+- mysql server auto start
 - vim setup in the box
 
 ## Requirements
@@ -60,4 +61,6 @@ host $ vagrant up
 host $ vagrant package --output builds/devbox-2-0-x.box --vagrantfile builds/Vagrantfile
 ```
 
-Please check the [Vagrant documentation](http://vagrantup.com/v1/docs/index.html) for more information on Vagrant.
+## Userful
+- Please check the [Vagrant documentation](http://vagrantup.com/v1/docs/index.html) for more information on Vagrant.
+- [Testing memcache with telnet](https://wincent.com/wiki/testing_memcached_with_telnet)
