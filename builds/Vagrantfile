@@ -1,0 +1,34 @@
+Vagrant.configure("2") do |config|
+  config.vm.box       = 'package-2-0-3'
+  config.vm.box_url   = './am-devbox-2-0-3.box'
+  config.vm.hostname = 'am-devbox-2-0-3'
+
+  # Rails & HTTP development
+  config.vm.network :forwarded_port, guest: 3000, host: 3000
+  # Mailcatcher
+  config.vm.network :forwarded_port, guest: 1080, host: 1080
+  # PostgreSQL
+  config.vm.network :forwarded_port, guest: 5432, host: 5432
+  # MySQL
+  config.vm.network :forwarded_port, guest: 3306, host: 3306
+  # MongoDB
+  config.vm.network :forwarded_port, guest: 27017, host: 27017
+  # Memcache
+  config.vm.network :forwarded_port, guest: 11211, host: 11211
+  # Redis
+  config.vm.network :forwarded_port, guest: 11211, host: 11211
+  # ElasticSearch
+  config.vm.network :forwarded_port, guest: 9200, host: 9200
+
+  config.ssh.forward_agent = true
+
+  config.vm.network :private_network, ip: "192.168.33.10"
+  config.vm.synced_folder ".", "/vagrant", id: "vagrant-root", nfs: true
+
+  config.vm.provider :virtualbox do |vb|
+    vb.customize ["modifyvm", :id, "--memory", "2000"]
+
+    # Enable shared clipboard
+    vb.customize ['modifyvm', :id, '--clipboard', 'bidirectional']
+  end
+end

@@ -4,3 +4,5 @@ tmp
 chef/cookbooks
 .idea
 package.box
+builds/*
+!builds/Vagrantfile

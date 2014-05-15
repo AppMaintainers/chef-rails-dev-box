@@ -20,6 +20,8 @@ run_list(
   "recipe[mongodb::default]",
   "recipe[nodejs::install_from_binary]",
   "recipe[phantomjs::default]",
+  "recipe[redisio::install]",
+  "recipe[redisio::enable]",
   "recipe[database]",
   "recipe[rvm::vagrant]",
   "recipe[rvm::user]",
