@@ -37,8 +37,8 @@ This tool is made by the [App Maintainers team](http://AppMaintainers.com) and u
 - curl
 
 ## TODO
-- db access setup in sample Vagrantfile and test it (port forward, access controll setup in the box)
 - mysql server auto start
+- elasticsearch proper config(it seems not working out of the box)
 - vim setup in the box
 
 ## Requirements
