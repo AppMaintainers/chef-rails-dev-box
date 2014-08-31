@@ -44,6 +44,7 @@ end
 - curl
 
 ## TODO
+- using [Veewee](https://github.com/jedi4ever/veewee) for base box creation
 - mysql server auto start
 - ElasticSearch
 - elasticsearch proper config(it seems not working out of the box)
