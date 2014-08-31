@@ -6,3 +6,4 @@ chef/cookbooks
 package.box
 builds/*
 !builds/Vagrantfile
+.DS_Store

@@ -14,8 +14,8 @@ This tool is made by the [App Maintainers team](http://AppMaintainers.com) and u
 ## Sample Vagrant file
 ```ruby
 Vagrant.configure("2") do |config|
-  config.vm.box       = 'devbox-2-0-5'
-  config.vm.box_url   = '~/Sites/chef-rails-dev-box/builds/devbox-2-0-5.box'
+  config.vm.box       = 'devbox-2-1-0'
+  config.vm.box_url   = 'chef-rails-dev-box/builds/devbox-2-1-0.box'
 end
 ```
 
@@ -25,7 +25,6 @@ end
 - MongoDB
 - Redis
 - Memcache
-- ElasticSearch
 
 ## Installed rubies
 - ree-1.8.7
@@ -46,8 +45,9 @@ end
 
 ## TODO
 - mysql server auto start
+- ElasticSearch
 - elasticsearch proper config(it seems not working out of the box)
-- vim setup in the box
+- vim setup in the box (file provisioning is the solution)
 
 ## Requirements
 
@@ -63,10 +63,10 @@ host $ git clone https://github.com/AppMaintainers/chef-rails-dev-box.git
 host $ cd chef-rails-dev-box
 host $ bundle install
 host $ cd chef
-host $ bundle exec librarian-chef install
-host $ cd ../
+host $ librarian-chef install (or bundle exec librarian-chef install)
 host $ vagrant up
-host $ vagrant package --output builds/devbox-2-0-x.box --vagrantfile builds/Vagrantfile
+host $ cd ../
+host $ vagrant package --output builds/devbox-2-1-x.box --vagrantfile builds/Vagrantfile
 ```
 
 ## Userful

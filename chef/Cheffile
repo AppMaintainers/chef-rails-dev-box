@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 #^syntax detection
 
-site 'http://community.opscode.com/api/v1'
+site "https://supermarket.getchef.com/api/v1"
 
 cookbook 'apt'
 cookbook 'chef-locale', git: 'https://github.com/deepak/chef-locale.git'
@@ -21,4 +21,4 @@ cookbook 'nfs'
 cookbook 'imagemagick'
 cookbook 'java'
 cookbook 'elasticsearch'
-cookbook 'redisio'
+cookbook 'redis', git: 'https://github.com/miah/chef-redis.git'

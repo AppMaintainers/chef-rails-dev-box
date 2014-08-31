@@ -2,9 +2,9 @@
 # vi: set ft=ruby :
 
 Vagrant::Config.run do |config|
-  config.vm.box = "opscode-ubuntu-12.04-chef11"
-  config.vm.box_url = "https://opscode-vm.s3.amazonaws.com/vagrant/opscode_ubuntu-12.04_chef-11.2.0.box"
-  config.vm.host_name = 'chef-rails-dev-box'
+  config.vm.box = "phusion/ubuntu-14.04-amd64"
+  config.vm.box_url = "phusion/ubuntu-14.04-amd64"
+  # config.vm.host_name = 'chef-rails-dev-box'
 
   config.vm.network :hostonly, "192.168.30.00"
   config.vm.share_folder("vagrant-root", "/vagrant", ".", "nfs" => true)
@@ -34,8 +34,8 @@ Vagrant::Config.run do |config|
           :user_installs => [
               {
                   :user => 'vagrant',
-                  :default_ruby  => '2.0',
-                  :rubies        => ['2.0', 'ree', '1.8.7', '1.9', '2.1']
+                  :default_ruby  => '2.1',
+                  :rubies        => ['ree', '1.8.7', '1.9', '2.0', '2.1']
               }
           ]
         },
