@@ -3,6 +3,8 @@
 ## Introduction
 This project automates the setup of a development environment for Ruby on Rails development. It also includes numerous other web development tools to help node.js and meteor projects.
 
+The VirtualBox version is publicly accessible on the VagrantCloud as [DevBox](https://vagrantcloud.com/appmaintainers/boxes/devbox). If you just need a box, start here.
+
 This tool is made by the [App Maintainers team](http://AppMaintainers.com) and uses Chef and Vagrant to automate the process.
 
 ## Passwords
